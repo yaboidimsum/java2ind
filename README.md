@@ -8,6 +8,8 @@ npm install
 yarn
 ```
 ```bash
+venv\Scripts\activate
+
 pip install -r requirements.txt
 ```
 First, run the development server:
