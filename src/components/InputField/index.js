@@ -3,3 +3,5 @@ const InputField = () => {
         <div>Ini Input</div>
     );
 }
+
+export default InputField;

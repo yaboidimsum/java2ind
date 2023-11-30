@@ -4,7 +4,7 @@ import Card from "@/components/Card";
 const Page = () => {
   return (
     <div className="min-h-screen bg-[#4285F4]">
-      <div className="flex h-screen items-center justify-center">
+      <div className="flex min-h-screen items-center justify-center">
         <div className="flex flex-col items-center justify-center gap-16">
           <h2 className="text-6xl font-bold text-white">DeDiDa Team</h2>
           <p className="max-w-[750px] text-center text-white font-medium text-lg">
