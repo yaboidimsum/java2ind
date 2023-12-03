@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <header className="shadow-xl shadow-slate-700">
+    <header className="shadow-lg shadow-slate-300">
       <div className="flex flex-row justify-between px-16 py-2">
         <div className="flex flex-row items-center gap-4">
           <div>
