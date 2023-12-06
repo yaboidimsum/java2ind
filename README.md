@@ -5,6 +5,8 @@ npm install
 ```
 Activate Python Virtual Enviroment
 ```
+python -m venv venv
+
 venv\Scripts\activate
 ```
 Install Python Dependencies
