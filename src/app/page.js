@@ -1,8 +1,16 @@
+"use client";
+
 import Card from "@/components/Card";
 import InputField from "@/components/InputField";
+import { useState } from "react";
 
 const Page = () => {
-  
+  const [translatedText, setTranslatedText] = useState("");
+
+  const handleTranslate = (translation) => {
+    setTranslatedText(translation);
+  };
+
   return (
     <>
       <section id="translate">
@@ -18,22 +26,24 @@ const Page = () => {
                     Java2Ind is a final project of{" "}
                     <span className="font-bold">Knowledge Based System</span>{" "}
                     that aims to translate Javanese sentences into Indonesian
-                    sentences. This project is developed to <span className="font-bold">improve the quality
-                    of Javanese-Indonesian translation</span> because Google fail to do
-                    so.
+                    sentences. This project is developed to{" "}
+                    <span className="font-bold">
+                      improve the quality of Javanese-Indonesian translation
+                    </span>{" "}
+                    because Google fail to do so.
                   </p>
                 </div>
                 <div className="flex flex-col gap-4">
                   <h2 className="text-2xl font-semibold text-slate-700">
                     Try Our Model:
                   </h2>
-                  <InputField placeholder="Teks Jowo" />
+                  <InputField placeholder="Teks Jowo" handleTranslate={handleTranslate} />
                 </div>
                 <div className="flex flex-col gap-4">
                   <h2 className="text-2xl font-semibold text-slate-700">
                     Translated Text:
                   </h2>
-                  <p>Lorem Ipsum</p>
+                  <p>{translatedText}</p>
                 </div>
               </div>
             </div>

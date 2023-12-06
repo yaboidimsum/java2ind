@@ -9,10 +9,10 @@ export const metadata = {
   title: 'Java2Ind',
   description: 'Java2Ind Translation',
 }
-
+ 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className=  {PJS.className}>
         <Navbar />
         {children}

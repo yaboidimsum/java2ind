@@ -1,8 +1,17 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from transformers import AutoModelForSeq2SeqLM
 from indobenchmark import IndoNLGTokenizer
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 tokenizer = IndoNLGTokenizer.from_pretrained('indobenchmark/indobart-v2')
 model = AutoModelForSeq2SeqLM.from_pretrained(
