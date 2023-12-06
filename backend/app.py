@@ -6,7 +6,7 @@ app = FastAPI()
 
 tokenizer = IndoNLGTokenizer.from_pretrained('indobenchmark/indobart-v2')
 model = AutoModelForSeq2SeqLM.from_pretrained(
-    "Mikask/indobart-indonlg-nusax-jv-id")
+    "Mikask/indobart-indonlg-nusax-500-jv-id")
 
 
 @app.get("/translate")
