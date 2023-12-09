@@ -28,16 +28,18 @@ const Page = () => {
                     that aims to translate Javanese sentences into Indonesian
                     sentences. This project is developed to{" "}
                     <span className="font-bold">
-                      improve the quality of Javanese-Indonesian translation
-                    </span>{" "}
-                    because Google fail to do so.
+                      improve the quality of Javanese-Indonesian translation.
+                    </span>
                   </p>
                 </div>
                 <div className="flex flex-col gap-4">
                   <h2 className="text-2xl font-semibold text-slate-700">
                     Try Our Model:
                   </h2>
-                  <InputField placeholder="Teks Jowo" handleTranslate={handleTranslate} />
+                  <InputField
+                    placeholder="Teks Jowo"
+                    handleTranslate={handleTranslate}
+                  />
                 </div>
                 <div className="flex flex-col gap-4">
                   <h2 className="text-2xl font-semibold text-slate-700">
@@ -56,7 +58,7 @@ const Page = () => {
           <div className="flex min-h-screen items-center justify-center">
             <div className="flex flex-col items-center justify-center gap-16">
               <h2 className="text-6xl font-bold text-white">DeDiDa Team</h2>
-              <p className="max-w-[750px] text-center text-lg font-medium text-white">
+              <p className="max-w-[65rem] text-center text-lg font-medium text-white">
                 Cheers to the incredible DeDiDa Team! 🌟 Transforming ideas into
                 reality, these amazing people are bridging languages, from
                 Javanese to Indonesian, and shaping the future. 🚀🌐 Still in
@@ -64,17 +66,17 @@ const Page = () => {
               </p>
               <div className="flex flex-row items-center justify-center gap-24">
                 <Card
-                  image="/img/user.png"
+                  image="/img/dar.png"
                   name="Darren Prasetya"
-                  title="Lead DL Manager & Researcher"
+                  title="Lead Project & Researcher"
                 />
                 <Card
-                  image="/img/user.png"
+                  image="/img/awan.png"
                   name="Dimas Prihady S."
                   title="Web Developer & Researcher"
                 />
                 <Card
-                  image="/img/user.png"
+                  image="/img/dew.png"
                   name="Dewangga Dhika D."
                   title="Data Provider & Researcher"
                 />
