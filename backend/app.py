@@ -40,8 +40,7 @@ async def translate(text: str):
 
         result = tokenizer.decode(
             translated_tokens[0], skip_special_tokens=True).strip()
-
         return {"translation": result}
-    except:
-        print(e)  # print the exception for debugging purposes
+    except Exception as e:
+        print(e)
         raise HTTPException(status_code=500, detail="Internal Server Error")

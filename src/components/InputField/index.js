@@ -8,6 +8,7 @@ const InputField = ({ placeholder, handleTranslate }) => {
 
   const handleInput = async () => {
     setLoading(true);
+    handleTranslate("loading");
     try {
       const response = await fetch(
         `http://127.0.0.1:8000/translate?text=${inputText}`,
@@ -30,6 +31,7 @@ const InputField = ({ placeholder, handleTranslate }) => {
       console.log(data.translation);
     } catch (err) {
       console.error("Translation failed:", err);
+      handleTranslate("Translation failed");
     } finally {
       setLoading(false);
     }
