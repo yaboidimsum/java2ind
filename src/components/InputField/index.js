@@ -4,8 +4,10 @@ import { useState } from "react";
 
 const InputField = ({ placeholder, handleTranslate }) => {
   const [inputText, setInputText] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleInput = async () => {
+    setLoading(true);
     try {
       const response = await fetch(
         `http://127.0.0.1:8000/translate?text=${inputText}`,
@@ -28,6 +30,8 @@ const InputField = ({ placeholder, handleTranslate }) => {
       console.log(data.translation);
     } catch (err) {
       console.error("Translation failed:", err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -41,9 +45,12 @@ const InputField = ({ placeholder, handleTranslate }) => {
       />
       <button
         onClick={handleInput}
-        className="rounded-md bg-blue-500 px-6 py-2 font-semibold text-white transition ease-in-out hover:bg-blue-600"
+        className={`rounded-md px-6 py-2 font-semibold text-white transition ${
+          loading ? 'bg-blue-400 text-slate-500 cursor-not-allowed' : 'bg-blue-500 hover:bg-blue-600'
+        }`}
+        disabled={loading}
       >
-        Translate
+        {loading ? 'Translating...' : 'Translate'}
       </button>
     </>
   );

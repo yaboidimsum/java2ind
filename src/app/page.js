@@ -16,7 +16,7 @@ const Page = () => {
       <section id="translate">
         <div className="min-h-screen">
           <div className="flex min-h-screen items-center justify-center">
-            <div className="flex items-center">
+            <div className="flex items-center w-[48rem]">
               <div className="flex flex-col gap-8">
                 <div className="flex flex-col gap-4">
                   <h2 className="text-3xl font-semibold text-slate-700">
